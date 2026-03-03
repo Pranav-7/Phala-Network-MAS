@@ -1,0 +1,23 @@
+{
+  "name": "phala",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@phala/dstack-sdk": "^0.5.7",
+    "ethereumjs-util": "^7.1.5",
+    "express": "^5.1.0",
+    "mime-types": "^3.0.1",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11",
+    "pdf-parse": "^2.4.5",
+    "uuid": "^13.0.0"
+  }
+}

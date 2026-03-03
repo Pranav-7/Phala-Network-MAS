@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pdf-api:
+    image: pranav6773/pdf-secure-api:latest
+    container_name: pdf-secure-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - STORAGE_DIR=/app/storage
+      - SIGN_SECRET=${SIGN_SECRET}
+    volumes:
+      - pdf-storage:/app/storage
+
+volumes:
+  pdf-storage:
+    driver: local

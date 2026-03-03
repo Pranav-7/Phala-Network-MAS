@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  attestation-api:
+    image: yourusername/attestation-storage-api:latest
+    container_name: attestation-storage
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - STORAGE_DIR=/app/storage
+      - DSTACK_SOCKET_PATH=/var/run/dstack.sock
+    volumes:
+      - attestation-storage:/app/storage
+      - /var/run/dstack.sock:/var/run/dstack.sock
+
+volumes:
+  attestation-storage:
+    driver: local
